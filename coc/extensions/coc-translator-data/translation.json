@@ -1,5 +1,37 @@
 [
   {
+    "id": "64156cb1-af79-4348-b47c-4237ffe989f2",
+    "content": [
+      "false",
+      "adj. 错误的；不正确的；不真实的；非天生的 "
+    ],
+    "path": "file:///home/vastness/.zshrc\t31\t26"
+  },
+  {
+    "id": "8404597f-8e5f-42a2-bda0-56024073bc00",
+    "content": [
+      "messed",
+      "n. 混乱；大杂烩；肮脏；错误 "
+    ],
+    "path": "file:///home/vastness/.config/zsh/default.zshrc\t33\t66"
+  },
+  {
+    "id": "b4c5c6be-0f2f-4189-83de-648855581b0e",
+    "content": [
+      "pasting",
+      "n. 大败；遭受痛打；受体罚 "
+    ],
+    "path": "file:///home/vastness/.config/zsh/default.zshrc\t33\t35"
+  },
+  {
+    "id": "6bdea896-33f4-4fbc-baeb-097439728239",
+    "content": [
+      "uncomment",
+      "web. 取消注释；取消注解；取消批注 "
+    ],
+    "path": "file:///home/vastness/.config/zsh/default.zshrc\t33\t3"
+  },
+  {
     "id": "b1d5be09-814f-45e1-b720-df756d7fe564",
     "content": [
       "reveal definition aside",
