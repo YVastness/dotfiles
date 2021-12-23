@@ -1,5 +1,21 @@
 [
   {
+    "id": "920aedc4-a813-4904-86da-15f90033c903",
+    "content": [
+      "filetype",
+      "un. 文件类型 "
+    ],
+    "path": "file:///home/vastness/.config/nvim/init.vim\t11\t1"
+  },
+  {
+    "id": "346babd1-c6f0-424d-ab13-068aaa153839",
+    "content": [
+      "coins",
+      "n. 硬币；铸币；〔俚语〕金钱；恩惠 "
+    ],
+    "path": "nofile:2\t37\t25"
+  },
+  {
     "id": "64156cb1-af79-4348-b47c-4237ffe989f2",
     "content": [
       "false",
