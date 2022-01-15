@@ -1,8 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/vastness/.config
 - /home/vastness/.config/nvim
 - /mnt/f/Documents/桌面文件/notes
-- /home/vastness/.config
 - /home/vastness/.oh-my-zsh
 - /opt/lazygit
 - /home/vastness/lazygit
