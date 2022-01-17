@@ -1,12 +1,15 @@
-lastupdatecheck: 1642230619
+lastupdatecheck: 1642249104
 recentrepos:
 - /home/vastness/.config
-- /opt/lazygit
-- /home/vastness/lazygit
+- /mnt/f/Documents/桌面文件/notes
 - /mnt/f/Desktop/gitTest
 - /home/vastness/.config/nvim
-- /mnt/f/Documents/桌面文件/notes
+- /opt/lazygit
+- /home/vastness/lazygit
 - /home/vastness/.oh-my-zsh
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- "yes"
+- ls
+- echo "hello world" > test.m
 hidecommandlog: false

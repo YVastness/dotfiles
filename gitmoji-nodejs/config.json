@@ -1,0 +1,7 @@
+{
+	"autoAdd": true,
+	"emojiFormat": "emoji",
+	"signedCommit": true,
+	"scopePrompt": false,
+	"gitmojisUrl": "https://gitmoji.dev/api/gitmojis"
+}
