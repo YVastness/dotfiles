@@ -1,9 +1,10 @@
 lastupdatecheck: 1642249104
 recentrepos:
 - /home/vastness/.config
+- /home/vastness/.config/nvim
+- /home/vastness/code
 - /mnt/f/Documents/桌面文件/notes
 - /mnt/f/Desktop/gitTest
-- /home/vastness/.config/nvim
 - /opt/lazygit
 - /home/vastness/lazygit
 - /home/vastness/.oh-my-zsh
@@ -12,4 +13,7 @@ customcommandshistory:
 - "yes"
 - ls
 - echo "hello world" > test.m
+- git remote -v
+- git remote remove origin
+- gitmoji -i
 hidecommandlog: false
