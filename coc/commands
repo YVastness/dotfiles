@@ -1,6 +1,6 @@
+git.foldUnchanged
 git.diffCached
 git.showCommit
-git.foldUnchanged
 git.toggleGutters
 clangd.install
 workspace.diffDocument

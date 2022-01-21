@@ -1,5 +1,37 @@
 [
   {
+    "id": "5bfde853-18d9-432a-a667-e7b05bd092a9",
+    "content": [
+      "{",
+      "left curly brace,左大括号"
+    ],
+    "path": "file:///home/vastness/code/C/demo.c\t4\t10"
+  },
+  {
+    "id": "6622847a-27f1-47d1-a474-f9efd26c5a22",
+    "content": [
+      "s",
+      "n. 字母 s, 英语字母表中第十九个字母"
+    ],
+    "path": "file:///home/vastness/code/C/test.c\t19\t11"
+  },
+  {
+    "id": "16bf33e2-240a-4d8e-9fa5-b4a74fc70375",
+    "content": [
+      "sizeof",
+      "n. 运算符；大小"
+    ],
+    "path": "file:///home/vastness/code/C/test.c\t11\t3"
+  },
+  {
+    "id": "3a159dc0-4b97-4df3-ad36-c729f413d6a0",
+    "content": [
+      "coc",
+      "abbr. 完工证明书（Certification of Completion）"
+    ],
+    "path": "file:///home/vastness/.config/nvim/init.vim\t327\t45"
+  },
+  {
     "id": "86abbe64-86a3-421b-aab4-4ed56bed9e9b",
     "content": [
       "factor",
