@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "coc-clangd": ">=0.18.2",
+    "coc-explorer": ">=0.21.0",
     "coc-flutter-tools": ">=1.6.4",
     "coc-git": ">=2.4.6",
     "coc-json": ">=1.4.1",
