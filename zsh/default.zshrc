@@ -1,3 +1,9 @@
+# __  ____   __  _________  _   _ ____   ____     _  _   
+#|  \/  \ \ / / |__  / ___|| | | |  _ \ / ___|  _| || |_ 
+#| |\/| |\ V /    / /\___ \| |_| | |_) | |     |_  ..  _|
+#| |  | | | |    / /_ ___) |  _  |  _ <| |___  |_      _|
+#|_|  |_| |_|   /____|____/|_| |_|_| \_\\____|   |_||_|  
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -6,7 +12,7 @@ export ZSH=$HOME/.oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-
+# robbyrussell
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -22,13 +28,15 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 #  禁用oh-my-zsh自动升级
-DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="false"
 
 # Uncomment the following line to automatically update without prompting.
+#如果没有禁用自动更新，则不会出现确认提示，而是 Oh My Zsh 会在自动更新到期时不询问的情况下进行更新。
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# 这个设置告诉 Oh My Zsh 应该多久自动更新一次（以天为单位）。如果禁用自动更新，则此设置没有任何影响。
+export UPDATE_ZSH_DAYS=31
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -68,7 +76,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting emoji-clock emoji)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,32 +96,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-
-# 由于政策原因，所有源自 Debian 的autojump发行版都需要手动激活
-. /usr/share/autojump/autojump.sh
-
-
-#默认使用编辑器
-export EDITOR=/usr/bin/nvim
-######################################################################
-###FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#Append this line to ~/.zshrc to enable fzf keybindings for Zsh:
-#source /usr/share/doc/fzf/examples/key-bindings.zsh
-#Append this line to ~/.zshrc to enable fuzzy auto-completion for Zsh:
-#source /usr/share/doc/fzf/examples/completion.zsh
-# 这行配置开启 fd 查找隐藏文件 及忽略 .git 文件等
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude={.git,.idea,.sass-cache,node_modules,build} . ~/.config /home / '
-#export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
-#该环境变量定义了 fzf 的参数
-export FZF_DEFAULT_OPTS='--height 90% --bind ctrl-j:down,ctrl-k:up --preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500"'
-export FZF_COMPLETION_TRIGGER='\'
-export FZF_PREVIEW_COMMAND='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'
-######################################################################
-

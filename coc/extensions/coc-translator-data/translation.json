@@ -1,5 +1,69 @@
 [
   {
+    "id": "764fb306-13b1-48a1-aa52-fe4284ad3fcb",
+    "content": [
+      "package",
+      "n. 包裹；<美>（包装食物等的）盒，包；（建议或提供的想法或服务的）一套，一揽子；包价（旅游）；成套出售的东西，套餐；软件包"
+    ],
+    "path": "file:///home/vastness/code/golang/src/hello/test.go\t2\t1"
+  },
+  {
+    "id": "beb5899a-d380-4f6a-acfb-f1532c2c68fb",
+    "content": [
+      "go",
+      "v. 去，走；（尤指与某人）去（某处或出席某项活动）；可能要，打算做；移动，行走；在移动中做；做某个动作；离开；（为某目的）去（某处）；去做（某事）；被发送，被传递；参加（电视或电台节目）；通向，延伸到；上升；放在（通常的位置上）；放得进，适合；相配，协调；除尽，除；进行，进展；被接受，被允许；开始做（某事），进入（某种状态）；变为，变得（尤指朝坏的方面）；处于（尤指令人不快的状况）；（故事、歌词等）内容是；发出（某种声音）；发出信号（或警告）；<非正式>说；开始（活动）；<非正式>走开，滚开；参与（表示对所提到行为不赞成）；运转，工作；停止正常运转；消失，不见；得辞掉，被扔掉；（官能）衰退，下降；死亡；用掉，花掉；卖掉，归于；出价购买；促成，显示；流逝，消逝；继续，持续；<非正式>上厕所；（某人的话）算数；（决定、判决等）对…...不利；取得（某成绩、比分等）"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/coc.vim\t80\t8"
+  },
+  {
+    "id": "88cde63f-b4b8-427f-bc11-7343e09717a4",
+    "content": [
+      "diff",
+      "abbr. 扩散器（diffuser）；微分；差速器（differential）"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/coc.vim\t80\t8"
+  },
+  {
+    "id": "9a358b67-0b5c-40d4-a54a-d96f5aae95c7",
+    "content": [
+      "chunk",
+      "n. 大块，厚块；大量，大部分；话语组成部分，组块；矮胖的（男）人"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/coc.vim\t80\t8"
+  },
+  {
+    "id": "74cf7828-9392-4cea-8b42-3b60db8803b0",
+    "content": [
+      "imap",
+      "abbr. 消息访问协议（Internet Message Access Protocol）"
+    ],
+    "path": "file:///home/vastness/.config/nvim/init.vim\t57\t1"
+  },
+  {
+    "id": "f47439ac-5151-4cdb-9b89-c15a32ace3b0",
+    "content": [
+      "set",
+      "v.  放，置；使开始；把故事情节安排在；设置；摆放餐具；镶嵌；安排；树立；布置；凝固；使现出坚定的表情；固定发型；把（断骨）复位；排版；为……谱曲；落（下）；布置（戏剧、电影或电视节目的布景）；（断骨）愈合"
+    ],
+    "path": "file:///mnt/c/Users/yinhaoyu/.ideavimrc\t46\t1"
+  },
+  {
+    "id": "50ac7e7b-eddb-423f-a9a0-57b5f901fa2f",
+    "content": [
+      "Path",
+      "n. 小径，小道；（开出的）通道；（事物或人移动的）路线，轨迹；（有助于实现某事的）道路，途径；通勤火车时刻表；（计算机）路径"
+    ],
+    "path": "file:///home/vastness/.config/zsh/default.zshrc\t7\t6"
+  },
+  {
+    "id": "aaae044e-0807-4550-b611-5fb3c0434a0d",
+    "content": [
+      "disable",
+      "v. 使丧失能力，使伤残；使无效，使不能运转；使无资格"
+    ],
+    "path": "file:///home/vastness/.config/zsh/default.zshrc\t47\t39"
+  },
+  {
     "id": "5bfde853-18d9-432a-a667-e7b05bd092a9",
     "content": [
       "{",

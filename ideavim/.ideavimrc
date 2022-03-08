@@ -1,0 +1,288 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+" gcc注释一行
+" gcap注释一段
+" gc + 运动 注释运动的范围
+
+"用法
+"   [count]["x]gr{motion} 用寄存器 x 的内容替换 {motion} 文本。
+"                          特别是在使用未命名寄存器时，这是
+"                         比 "_d{motion}P 或 "_c{motion}<CR>" 快
+"  [count]["x]grr 用寄存器 x 的内容替换 [count] 行。
+"                          替换从光标位置到结尾
+"                          行使用 ["x]gr$
+"  {Visual}["x]gr 用寄存器 x 的内容替换选择。
+
+"   Vim 的简单文本交换运算符。
+"映射
+"cx
+"在第一次使用时，定义要交换的第一个 {motion}。在第二次使用时，定义第二个 {motion} 并执行交换。
+"cxx
+"像cx，但使用当前行。
+"X
+"像cx，但用于可视模式。
+"cxc
+"清除任何等待交换的{motion}。
+""" "Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set NERDTree
+set exchange
+set highlightedyank
+set textobj-indent
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+set idearefactormode=keep
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+map <leader>c <Action>(Stop)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <S-Space> <Action>(GotoNextError)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+" 设置debug为 zd
+:nnoremap zd :action Debug<CR>
+" 设置run 为 zr
+:nnoremap zr :action Run<CR>
+" 相对当前行行数显示
+
+" set relativenumber
+set scrolloff=3
+set history=100000
+set clipboard=unnamed
+
+" clear the highlighted search result
+" (清除高亮)
+nnoremap <leader>sc :nohlsearch<CR>
+nnoremap tt :NERDTree<CR>
+
+nnoremap <leader>w :w<CR>
+
+
+" Quit normal mode
+" (保存关闭)
+nnoremap <leader>q  :q<CR>
+nnoremap <leader>Q  :qa!<CR>
+
+" Move half page faster
+" (上下翻页)
+nnoremap <leader>d  <C-d>
+nnoremap <leader>u  <C-u>
+
+" 快速进入vim模式
+inoremap jj <Esc>
+inoremap jk <Esc>
+inoremap kk <Esc>
+
+" Quit visual mode
+vnoremap v <Esc>
+
+" Redo
+nnoremap U <C-r>
+
+" 以下是一些vim使用方法 -----------------
+" viw  vaw  ciw caw diw daw vi' va' ci' ca' di' da' vi( va( ci( ca( di( da( ...
+
+" ###### vim宏：normal模式下 qr 带表给r标记宏 然后vim操作。  @r 重复一次宏 10@r重复10次宏 注意（idea的提示功能干扰，可以在字符串里面先写好然后在复制黏贴）
+
+" ###### 7.2 替换
+"           :s/old/new - 用new替换当前行第一个old。
+"           :s/old/new/g - 用new替换当前行所有的old。
+"           :n1,n2s/old/new/g - 用new替换文件n1行到n2行所有的old。
+"           :%s/old/new/g - 用new替换文件中所有的old。
+"           :%s/^/xxx/g - 在每一行的行首插入xxx，^表示行首。
+"           :%s/$/xxx/g - 在每一行的行尾插入xxx，$表示行尾。
+"           有替换命令末尾加上c，每个替换都将需要用户确认。 如：%s/old/new/gc，加上i则忽略大小写(ignore)。
+"           有一种比替换更灵活的方式，它是匹配到某个模式后执行某种命令，
+"           法为 :[range]g/pattern/command
+"           如 :%g/^ xyz/normal dd。
+"           示对于以一个空格和xyz开头的行执行normal模式下的dd命令。
+"           于range的规定为：
+"           果不指定range，则表示当前行。
+"           ,n: 从m行到n行。
+"           : 最开始一行（可能是这样）。
+"           $: 最后一行
+"           .: 当前行
+"           %: 所有行
+
+" 以上是一些vim使用方法 -----------------
+
+" 以下是自定义快捷键-----------------
+
+" 复制单个单词到寄存器a并标记到o (使用快捷键 空格+y)
+" 注释:（mo => 标记o）,(+yiw =>复制当前单词到系统剪切板),("a => 寄存器a) ,("ayiw => 复制当前单词到寄存器a)
+nnoremap <leader>y mo"+yiw"ayiw
+
+" 剪切单个单词到寄存器a并标记到o (使用快捷键 空格+x)
+" 注释:（mo => 标记o[标记为的是使用''来回跳标记]）,(+yiw =>复制当前单词到系统剪切板),("a => 寄存器a) ,("ayiw => 复制当前单词到寄存器a),(diw =>删除当前单词)
+nnoremap <leader>x mo"+yiw"ayiwdiw
+
+" 删除单个字符串并黏贴寄存器a的内容并来回标记o和p  (使用快捷键 空格+v)
+" 注释：（mp => 标记p）,(viw => 选中当前单词),（"a => 寄存器a）,(p => 将寄存器a内容黏贴到选中的单词),（'o => 跳回标记o）,('p =>跳回标记p[标记为的是使用''来回跳标记])
+nnoremap <leader>v mpviw"ap'o'p
+
+" idea内置快捷键alt+F1 (使用快捷键 空格+m)
+nnoremap <leader>m :action SelectIn<CR>
+
+" idea内置快捷键control+E (使用快捷键 空格+e)
+nnoremap <leader>e :action RecentFiles<CR>
+
+"生成get set方法  (使用快捷键 空格+cc)
+nnoremap <leader>gg :action Generate<CR>
+
+" shift+h--zz(向上翻页)(使用快捷键 空格+h)
+nnoremap <leader>h <S-h>zz
+
+" shift+l--zz(向下翻页)(使用快捷键 空格+l)
+nnoremap <leader>l <S-l>zz
+
+" 以上是自定义快捷键-----------------
+
+" quit ==> close current window
+"nnoremap <leader>q <C-W>w
+
+" Window operation
+" (关于窗口操作)
+nnoremap <leader>ww <C-W>w
+nnoremap <leader>wd <C-W>c
+nnoremap <leader>wj <C-W>j
+nnoremap <leader>wk <C-W>k
+nnoremap <leader>wh <C-W>h
+nnoremap <leader>wl <C-W>l
+nnoremap <leader>ws <C-W>s
+nnoremap <leader>w- <C-W>s
+nnoremap <leader>wv <C-W>v
+nnoremap <leader>w\| <C-W>v
+
+" Tab operation
+" (切换标签)
+nnoremap <C-j> gt
+nnoremap <C-k> gT
+
+" ==================================================
+" Show all the provided actions via `:actionlist`
+" ==================================================
+
+" project search
+"相当于IDEA的两次shift按钮
+nnoremap <leader>se :action SearchEverywhere<CR>
+
+"查找用法
+nnoremap <leader>fu :action FindUsages<CR>
+
+"打断点
+nnoremap <leader>bb :action ToggleLineBreakpoint<CR>
+
+"查看所有断点
+nnoremap <leader>br :action ViewBreakpoints<CR>
+
+"DUG启动
+nnoremap <leader>cd :action ChooseDebugConfiguration<CR>
+
+"跳转到Action
+nnoremap <leader>ga :action GotoAction<CR>
+
+"跳转到实体类
+nnoremap <leader>gc :action GotoClass<CR>
+
+"跳转到声明
+"nnoremap <leader>gd :action GotoDeclaration<CR>
+
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+"跳转到文件
+nnoremap <leader>gf :action GotoFile<CR>
+
+"跳转到实现类
+nnoremap <leader>gi :action GotoImplementation<CR>
+
+"跳转到测试类(没有则自动建立)
+nnoremap <leader>gt :action GotoTest<CR>
+
+"显示当前文件路径
+nnoremap <leader>fp :action ShowFilePath<CR>
+
+"激活maven窗口
+"nnoremap <leader>mv :action ActivateMavenProjectsToolWindow<CR>
+
+"修改所有的关联名字
+nnoremap <leader>rn :action RenameElement<CR>
+
+"修改当前文件的文件名
+nnoremap <leader>rf :action RenameFile<CR>
+
+"显示用法
+nnoremap <leader>su :action ShowUsages<CR>
+
+"关闭活动显示板
+nnoremap <leader>tc :action CloseActiveTab<CR>
+
+"以下是不常用
+
+"打开命令管理器
+nnoremap <leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
+vnoremap <leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
+
+" built in search looks better
+" (查找字符串)
+nnoremap / :action Find<CR>
+
+" but preserve ideavim search
+" (vim自带的搜索)
+nnoremap <leader>/ /
+
+"改变视图
+nnoremap <leader>cv :action ChangeView<CR>
+
+"跳转到标致
+nnoremap <leader>gs :action GotoSymbol<CR>
+
+"
+nnoremap <leader>ic :action InspectCode<CR>
+
+nnoremap <leader>oi :action OptimizeImports<CR>
+
+nnoremap <leader>pm :action ShowPopupMenu<CR>
+
+"正常启动工程
+nnoremap <leader>rc :action ChooseRunConfiguration<CR>
+nnoremap <leader>rr :action Run<CR>
+nnoremap <leader>rd :action Debug<CR>
+
+"单个文件
+nnoremap <leader>ss :action SingleFileExecutionAction<CR>
+nnoremap <leader>cc :action CPP.NewCppFile<CR>
+
+nnoremap <leader>lg :action ActivateVersionControlToolWindow<CR>
+nnoremap <leader>sd :action ToggleLineBreakpoint<CR>
+nnoremap + :action GotoNextError<CR>
+nnoremap - :action GotoPreviousError<CR>
+nnoremap [g :action VcsShowNextChangeMarker<CR>
+nnoremap ]g :action VcsShowPrevChangeMarker<CR>

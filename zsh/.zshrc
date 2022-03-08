@@ -77,7 +77,10 @@ export UPDATE_ZSH_DAYS=31
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting emoji-clock emoji)
-
+# Save the location of the current completion dump file.
+if [ -z "$ZSH_COMPDUMP" ]; then
+  ZSH_COMPDUMP="${ZDOTDIR:-${ZSH}}/cache/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
+fi
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -138,3 +141,5 @@ export FZF_PREVIEW_COMMAND='[[ $(file --mime {}) =~ binary ]] && echo {} is a bi
 ###GO
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
+###starship
+eval "$(starship init zsh)"
