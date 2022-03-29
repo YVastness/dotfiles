@@ -1,5 +1,29 @@
 [
   {
+    "id": "981b2f5a-fb88-435a-9ead-53c35dd5d5b1",
+    "content": [
+      "float",
+      "v. （使）漂浮，（使）浮动；轻盈走动，飘然移动；提出（想法或计划）；发行（股票）上市；使（货币汇率）自由浮动"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/coc.vim\t88\t36"
+  },
+  {
+    "id": "b02a982c-0a9c-41d0-bba9-b0ad4d526c14",
+    "content": [
+      "silent",
+      "adj. （人）安静的，沉默的；沉默寡言的，不爱说话的；（事物）无声的，寂静的；（情感、行为等）不用言语表达的，默默的；只字不提的，不愿讲的；（电影）无声的；（字母）不发音的；（疾病或问题等）悄然的，无症状的"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/coc.vim\t45\t22"
+  },
+  {
+    "id": "cc53ab34-cb8e-4cb5-9915-4766dd8c24b6",
+    "content": [
+      "implementation",
+      "n. 实施，执行"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/coc.vim\t39\t29"
+  },
+  {
     "id": "0895aeaf-5c6f-4e9b-9467-0f25a17a955e",
     "content": [
       "count",

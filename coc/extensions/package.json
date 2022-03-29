@@ -4,7 +4,7 @@
     "coc-explorer": ">=0.22.9",
     "coc-flutter-tools": ">=1.6.4",
     "coc-git": ">=2.4.9",
-    "coc-go": ">=1.1.0",
+    "coc-go": ">=1.2.1",
     "coc-json": ">=1.4.1",
     "coc-lightbulb": ">=0.0.8",
     "coc-marketplace": ">=1.9.0",
