@@ -21,8 +21,9 @@ fi
 echo '=======================install softwares======================='
 add-apt-repository ppa:deadsnakes/ppa
 sudo add-apt-repository ppa:lazygit-team/release
+sudo apt-add-repository ppa:neovim-ppa/stable
 sudo apt update
-softwares=(software-properties-common python3.9 golang fd-find ruby-full bat make yadm lazygit neovim ranger fzf autojump git zsh ripgrep htop)
+softwares=(software-properties-common python3.9 translate-shell golang fd-find ruby-full rust-all bat make yadm lazygit git-all neovim ranger fzf autojump git zsh ripgrep htop)
 for software in "${softwares[@]}"; do
 	software_cli=$(whereis "$software")
 	if [ "${software_cli}" != "$software:" ]; then
