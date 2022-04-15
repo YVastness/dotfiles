@@ -44,17 +44,16 @@ apt install docker-ctop
 
 gem install colorls
 
-# zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 echo '=======================config git======================='
 git config --global user.name vastness
 git config --global user.email 1916286435@qq.com
 git clone https://gitee.com/yin_haoyu/nvim.git /home/vastness/.config/nvim
 git clone https://gitee.com/yin_haoyu/config.git /home/vastness/.config
-git clone git://github.com/sjl/oh-my-zsh.git ~/.oh-my-zsh
 yadm clone  https://gitee.com/yin_haoyu/yadm.git
 echo '=======================config zsh======================='
+git clone git://github.com/sjl/oh-my-zsh.git ~/.oh-my-zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 chsh -s /usr/bin/zsh
 
 cat <<EOF

@@ -1,3 +1,4 @@
+bash|bash|file
 |README.md|file
 java|java|around
 test|test|around
