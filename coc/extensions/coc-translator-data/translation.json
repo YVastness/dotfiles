@@ -1,5 +1,53 @@
 [
   {
+    "id": "4cffef79-2ab0-4e6e-9b43-c97be1c2e4ff",
+    "content": [
+      "更多安装方式：",
+      "More installation method:"
+    ],
+    "path": "file:///home/vastness/code/wiki/%E7%BB%88%E7%AB%AF%E6%93%8D%E4%BD%9C%E5%BD%95%E5%88%B6%E5%B7%A5%E5%85%B7%EF%BC%9Aasciinema.md\t3\t1"
+  },
+  {
+    "id": "26487d6a-2fde-47be-a45e-7361708fc97f",
+    "content": [
+      "show chunk diff at current position",
+      "在当前位置显示块diff"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/coc.vim\t111\t3"
+  },
+  {
+    "id": "4b2ff67a-1161-4c52-9ea7-aa01c10813ff",
+    "content": [
+      "position",
+      "n. 位置，地点；恰当位置，正确位置；阵地；姿势，安置方式；处境，状况；观点，立场；地位，身份；职务，职位；（比赛、竞赛中的）名次；（运动员的）位置，职责；（芭蕾舞或瑜伽功中的）姿势；（性交时的）姿势；（国际象棋中的）布局；（音乐）把位；（音乐）和弦位置；（逻辑）命题，主张"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/coc.vim\t111\t30"
+  },
+  {
+    "id": "6db86173-7091-43a5-a4fc-c2e072108624",
+    "content": [
+      "codeaction",
+      "codeaction"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/coc.vim\t67\t28"
+  },
+  {
+    "id": "764d014b-2398-4a8d-b879-c254bd56f220",
+    "content": [
+      "#Plug",
+      "#插头"
+    ],
+    "path": "file:///home/vastness/.config/nvim/config/plugins.vim\t27\t1"
+  },
+  {
+    "id": "f91a98ff-5a2f-464b-950a-cf56bd4a8d58",
+    "content": [
+      "0",
+      "zero"
+    ],
+    "path": "term://~/code//25336%3A/usr/bin/sh\t1\t1"
+  },
+  {
     "id": "981b2f5a-fb88-435a-9ead-53c35dd5d5b1",
     "content": [
       "float",

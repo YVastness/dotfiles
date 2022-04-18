@@ -1,3 +1,17 @@
+shell|shell|around
+html|html|around
+asc|asciinema，命令行工具，用于记录终端操作|buffer
+支持的|支持的平台：|buffer
+asc|asciinema|buffer
+she|shell|around
+plug|plug|snippets
+|plantuml.jar|file
+|plugged|file
+n|nvim|file
+sout|sout|snippets
+main|main|snippets
+book|book|buffer
+doc|documentclass|buffer
 bash|bash|file
 |README.md|file
 java|java|around
@@ -53,7 +67,6 @@ N|NULL|clangd
 wh|while|clangd
 nex|next|clangd
 Link|Link|clangd
-main|main|snippets
 stdio|stdio.h>|clangd
 inc|include|clangd
 std|std|clangd

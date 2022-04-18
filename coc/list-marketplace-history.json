@@ -10,5 +10,14 @@
   ],
   "L2hvbWUvdmFzdG5lc3MvY29kZS9nb2xhbmc=": [
     "go"
+  ],
+  "L2hvbWUvdmFzdG5lc3MvY29kZQ==": [
+    "markdown",
+    "pre",
+    "latex",
+    "rust"
+  ],
+  "L2hvbWUvdmFzdG5lc3MvY29kZS9ndWVzc2luZ19nYW1lL3NyYw==": [
+    "rust"
   ]
 }
