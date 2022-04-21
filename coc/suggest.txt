@@ -1,3 +1,6 @@
+set|setBookLocation|around
+retur|returnBook|around
+bo|borrowBook|around
 shell|shell|around
 html|html|around
 asc|asciinema，命令行工具，用于记录终端操作|buffer

@@ -1,17 +1,28 @@
 {
 	"name": "Vimium C",
-	"@time": "2022/4/18 18:12:21",
-	"time": 1650276741706,
+	"@time": "2022/4/21 17:15:58",
+	"time": 1650532558163,
 	"environment": {
 		"extension": "1.96.6",
 		"platform": "win",
 		"chrome": "100"
 	},
 	"allBrowserUrls": true,
-	"exclusionRules": [],
+	"exclusionRules": [
+		{
+			"passKeys": "",
+			"pattern": "^https://leetcode-cn\\.com/problems/"
+		},
+		{
+			"passKeys": "[ ] d e f m p q w ",
+			"pattern": ":https://www.bilibili.com/"
+		}
+	],
 	"keyMappings": [
 		"#!no-check",
 		"map cb createTab url=\"https://www.bilibili.com/\"",
+		"map cz createTab url=\"https://www.zhihu.com/\"",
+		"map cm createTab url=\"https://gitee.com/\"",
 		"map O Vomnibar.activate",
 		"map o Vomnibar.activateInNewTab",
 		"map b Vomnibar.activateBookmarksInNewTab",
@@ -19,9 +30,23 @@
 		"map h previousTab",
 		"map l nextTab",
 		"map v LinkHints.activateSelect",
+		"map di LinkHints.activateDownloadImage",
+		"map dl LinkHints.activateDownloadLink",
 		"map <c-j> goBack",
 		"map <c-k> goForward",
 		"mapKey <a-j> <esc>",
+		"map si LinkHints.activateOpenImage",
+		"map gv LinkHints.activateOpenVomnibar",
+		"map ab addBookmark",
+		"map cd closeDownloadBar",
+		"map co closeOtherTabs",
+		"map cl closeTabsOnLeft",
+		"map cr closeTabsOnRight",
+		"map gt firstTab",
+		"map gT lastTab",
+		"map <c-d> scrollPageDown",
+		"map ps captureTab",
+		"map st sortTabs",
 		""
 	],
 	"linkHintCharacters": "asdfjkl;",
@@ -75,5 +100,12 @@
 		"js\\:|Js: javascript:\\ $S; JavaScript",
 		""
 	],
-	"vimSync": true
+	"vimSync": true,
+	"vomnibarOptions": {
+		"actions": "",
+		"maxMatches": 10,
+		"queryInterval": 333,
+		"sizes": "77,3,44,0.8",
+		"styles": "dark"
+	}
 }
