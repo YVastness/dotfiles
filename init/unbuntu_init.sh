@@ -14,14 +14,20 @@ echo '===============change sources===================='
 read -p "是否要换Ubuntu软件源（y/N)" sources
 if [ $sources == 'y' ]; then
 	chmod 777 /etc/apt/sources.list
-	echo 'deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >/etc/apt/sources.list
-	echo 'deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >>/etc/apt/sources.list
+	# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+	echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse' >/etc/apt/sources.list
+	echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse' >>/etc/apt/sources.list
+	echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse' >>/etc/apt/sources.list
+	echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse' >>/etc/apt/sources.list
+	# 预发布软件源，不建议启用
+	# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+	# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
 	apt update
 fi
 echo '=======================install softwares======================='
 add-apt-repository ppa:deadsnakes/ppa
 sudo add-apt-repository ppa:lazygit-team/release
-sudo apt-add-repository ppa:neovim-ppa/stable
+# sudo apt-add-repository ppa:neovim-ppa/stable
 sudo apt update
 softwares=(software-properties-common python3.9 translate-shell golang fd-find glow figlet lolcat ruby-full rust-all bat make yadm lazygit git-all neovim ranger fzf autojump git zsh ripgrep htop)
 for software in "${softwares[@]}"; do
