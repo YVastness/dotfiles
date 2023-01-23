@@ -22,14 +22,12 @@ if [ $sources == 'y' ]; then
 	# 预发布软件源，不建议启用
 	# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
 	# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
-	apt update
+	# neovim-ppa
+	sudo add-apt-repository ppa:neovim-ppa/stable
+	sudo apt update
 fi
 echo '=======================install softwares======================='
-add-apt-repository ppa:deadsnakes/ppa
-sudo add-apt-repository ppa:lazygit-team/release
-# sudo apt-add-repository ppa:neovim-ppa/stable
-sudo apt update
-softwares=(software-properties-common python3.9 translate-shell golang fd-find glow figlet lolcat ruby-full rust-all bat make yadm lazygit git-all neovim ranger fzf autojump git zsh ripgrep htop)
+softwares=(software-properties-common translate-shell fd-find figlet lolcat ruby-full gcc make git-all neovim fzf zsh htop)
 for software in "${softwares[@]}"; do
 	software_cli=$(whereis "$software")
 	if [ "${software_cli}" != "$software:" ]; then
@@ -40,26 +38,20 @@ for software in "${softwares[@]}"; do
 	fi
 done
 
-curl -sS https://starship.rs/install.sh | sh
-go get github.com/jesseduffield/lazydocker
-
-echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
-wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
-apt update
-apt install docker-ctop
+# ctop
+apt install zlib1g-dev libbz2-dev libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev tk-dev libgdbm-dev libdb-dev libpcap-dev xz-utils libexpat1-dev liblzma-dev libffi-dev libc6-dev
+sudo http -d -o /usr/local/bin/ctop https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-amd64
+sudo chmod +x /usr/local/bin/ctop
 
 gem install colorls
 
 echo '=======================config git======================='
 git config --global user.name vastness
 git config --global user.email 1916286435@qq.com
-git clone https://gitee.com/yin_haoyu/nvim.git /home/vastness/.config/nvim
-git clone https://gitee.com/yin_haoyu/config.git /home/vastness/.config
-yadm clone  https://gitee.com/yin_haoyu/yadm.git
 echo '=======================config zsh======================='
-git clone git://github.com/sjl/oh-my-zsh.git ~/.oh-my-zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://gitcode.net/mirrors/robbyrussell/oh-my-zsh.git /home/vastness/.oh-my-zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions /home/vastness/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/vastness/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 chsh -s /usr/bin/zsh
 
 cat <<EOF
