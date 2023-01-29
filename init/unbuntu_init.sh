@@ -27,7 +27,7 @@ if [ $sources == 'y' ]; then
 	sudo apt update
 fi
 echo '=======================install softwares======================='
-softwares=(software-properties-common translate-shell fd-find figlet lolcat ruby-full gcc make git-all neovim fzf zsh htop)
+softwares=(software-properties-common lua5.2 LUAROCKS translate-shell fd-find figlet lolcat ruby-full gcc make git-all neovim fzf zsh htop)
 for software in "${softwares[@]}"; do
 	software_cli=$(whereis "$software")
 	if [ "${software_cli}" != "$software:" ]; then
