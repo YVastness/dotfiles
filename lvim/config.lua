@@ -25,8 +25,18 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
-vim.keymap.del("n", "<C-Up>")
+vim.keymap.del("n", "s")
 vim.keymap.set("n", "<C-q>", ":q<cr>")
+-- ---------- 插入模式 ---------- ---
+vim.keymap.set("i", "jj", "<ESC>")
+vim.keymap.set("i", "jk", "<ESC>")
+-- ---------- 正常模式 ---------- ---
+-- 常规
+-- keymap.set("n", "<leader>q", ":Bdelete<CR>")
+-- 窗口
+-- keymap.set("n", "<leader>e", "<C-w>h")
+-- keymap.set("n", "<leader>sv", "<C-w>v") -- 水平新增窗口
+-- keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直新增窗口
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -61,6 +71,7 @@ lvim.builtin.telescope.defaults.mappings = {
 --   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 --   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 -- }
+lvim.builtin.which_key.mappings["Q"] = { ":qa<CR>", "Close All Buffer" }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -166,7 +177,49 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-  { "catppuccin/nvim", as = "catppuccin" }
+  --==========================
+  -- 外观
+  --==========================
+  {
+    "catppuccin/nvim",
+    as = "catppuccin"
+  },
+  {
+    "phaazon/hop.nvim",
+    event = "BufRead",
+    config = function()
+      require("hop").setup()
+      -- vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
+      -- vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+    end,
+  },
+  {
+    "Pocco81/auto-save.nvim",
+    config = function()
+      require("auto-save").setup()
+    end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
+  {
+    "tpope/vim-surround",
+    -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
+    -- setup = function()
+    --  vim.o.timeoutlen = 500
+    -- end
+  },
+  {
+    "ggandor/leap.nvim",
+    event = "BufRead",
+    config = function()
+      require('leap').add_default_mappings()
+    end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
