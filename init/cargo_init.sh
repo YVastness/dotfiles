@@ -10,3 +10,4 @@ cargo install zellij
 cargo install --locked bat
 cargo install ripgrep
 cargo install starship --locked
+cargo install git-delta
