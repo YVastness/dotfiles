@@ -1,6 +1,8 @@
 lastupdatecheck: 1642249104
 recentrepos:
 - /home/vastness/.config
+- /home/vastness/.config/nvim
+- /mnt/c/Users/Vastness/Code/health/health_parent
 - /home/vastness/code
 - /home/vastness/.oh-my-zsh
 startuppopupversion: 5
